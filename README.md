@@ -79,7 +79,7 @@ client.send_apns_message(arn: arn, message: message, sandbox: environment.sandbo
 
 - use ActiveJob
 
-```
+```ruby
 class AmazonSnsJob < ApplicationJob
   queue_as :amazon_sns
 
