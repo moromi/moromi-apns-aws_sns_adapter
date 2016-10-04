@@ -1,5 +1,7 @@
 # Moromi::Apns::AwsSnsAdapter
 
+[![Latest Version](https://img.shields.io/gem/v/moromi-apns-aws_sns_adapter.svg)](http://rubygems.org/gems/moromi-apns-aws_sns_adapter)
+
 extension for moromi-apns and moromi-aws-sns
 
 ## Installation
