@@ -6,6 +6,7 @@ class Moromi::Apns::Message::Base
         alert: alert,
         sound: sound,
         'content-available' => content_available,
+        'mutable-content' => mutable_content,
         priority: priority
       }
     }
