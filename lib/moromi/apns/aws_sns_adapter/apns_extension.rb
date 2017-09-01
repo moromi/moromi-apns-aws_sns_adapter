@@ -1,5 +1,7 @@
 class Moromi::Apns::Message::Base
-  def to_aws_sns_params
+  include Moromi::Aws::Sns::Message::Base
+
+  def to_parameter
     base = {
       aps: {
         badge: badge,
@@ -10,7 +12,7 @@ class Moromi::Apns::Message::Base
         priority: priority
       }
     }
-    custom_data.merge(base)
+    Moromi::Aws::Sns::Message::Parameter.new(apns: custom_data.merge(base))
   end
 end
 
