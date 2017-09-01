@@ -1,7 +1,6 @@
 require 'moromi/apns/aws_sns_adapter/version'
 require 'moromi/apns/aws_sns_adapter/config'
 require 'moromi/apns/aws_sns_adapter/apns_extension'
-require 'moromi/apns/aws_sns_adapter/aws_sns_extension'
 
 module Moromi
   module Apns
