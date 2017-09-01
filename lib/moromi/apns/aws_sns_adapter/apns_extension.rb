@@ -1,16 +1,8 @@
 class Moromi::Apns::Message::Base
-  def to_aws_sns_params
-    base = {
-      aps: {
-        badge: badge,
-        alert: alert,
-        sound: sound,
-        'content-available' => content_available,
-        'mutable-content' => mutable_content,
-        priority: priority
-      }
-    }
-    custom_data.merge(base)
+  include Moromi::Aws::Sns::Message::Base
+
+  def to_parameter
+    Moromi::Aws::Sns::Message::Parameter.new(apns: to_hash)
   end
 end
 
